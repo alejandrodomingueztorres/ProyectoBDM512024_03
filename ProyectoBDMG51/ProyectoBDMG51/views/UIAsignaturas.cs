@@ -16,5 +16,10 @@ namespace ProyectoBDMG51.views
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombreAsignatura = textBox1.Text;
+        }
     }
 }

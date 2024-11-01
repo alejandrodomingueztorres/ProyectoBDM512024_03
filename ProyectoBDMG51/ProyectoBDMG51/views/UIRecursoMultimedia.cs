@@ -16,5 +16,14 @@ namespace ProyectoBDMG51.views
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string tituloRecurso = textBox1.Text;
+            string fechaCreacionR = textBox2.Text;
+            string descripcionRecurso = textBox3.Text;
+            string archivoRecurso = textBox4.Text;
+            string aprobacion = textBox5.Text;
+        }
     }
 }
