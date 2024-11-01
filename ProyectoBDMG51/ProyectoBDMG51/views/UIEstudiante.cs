@@ -16,5 +16,14 @@ namespace ProyectoBDMG51.views
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombreEstudiante1 = textBox1.Text;
+            string apellidoEstudiante1 = textBox2.Text;
+            string correoE = textBox3.Text;
+            string identificacionE = textBox4.Text;
+            string passwordE = textBox5.Text;
+        }
     }
 }
