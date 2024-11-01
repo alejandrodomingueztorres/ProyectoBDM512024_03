@@ -34,5 +34,10 @@ namespace ProyectoBDMG51.models
         public string TituloRecurso { get => tituloRecurso; set => tituloRecurso = value; }
         public DateTime FechaCreacionR { get => fechaCreacionR; set => fechaCreacionR = value; }
         public string DescripcionRecurso { get => descripcionRecurso; set => descripcionRecurso = value; }
+        public int IdTRFK { get => idTRFK; set => idTRFK = value; }
+        public string ArchivoRecurso { get => archivoRecurso; set => archivoRecurso = value; }
+        public int IdDocenteFK { get => idDocenteFK; set => idDocenteFK = value; }
+        public int IdEstudianteFK { get => idEstudianteFK; set => idEstudianteFK = value; }
+        public int IdAsignaturaFK { get => idAsignaturaFK; set => idAsignaturaFK = value; }
     }
 }

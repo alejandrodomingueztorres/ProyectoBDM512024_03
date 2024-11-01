@@ -21,6 +21,17 @@ namespace ProyectoBDMG51.models
         {
         }
 
+        public Estudiante(string nombreEstudiante1, string nombreEstudiante2, string apellidoEstudiante1, string apellidoEstudiante2, string correoE, string identificacionE, string passwordE)
+        {
+            this.nombreEstudiante1 = nombreEstudiante1;
+            this.nombreEstudiante2 = nombreEstudiante2;
+            this.apellidoEstudiante1 = apellidoEstudiante1;
+            this.apellidoEstudiante2 = apellidoEstudiante2;
+            this.correoE = correoE;
+            this.identificacionE = identificacionE;
+            this.passwordE = passwordE;
+        }
+
         public Estudiante(int idEstudiante, string nombreEstudiante1, string nombreEstudiante2, string apellidoEstudiante1, string apellidoEstudiante2, string correoE, string identificacionE, string passwordE)
         {
             this.idEstudiante = idEstudiante;
