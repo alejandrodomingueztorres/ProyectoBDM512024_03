@@ -25,7 +25,7 @@ namespace ProyectoBDMG51.views
         private void button1_Click(object sender, EventArgs e)
         {
             string contenidoComentarioD = textBox1.Text;
-            string fechaComentrioD = textBox2.Text; 
+            string fechaComentarioD = textBox2.Text; 
         }
     }
 }
