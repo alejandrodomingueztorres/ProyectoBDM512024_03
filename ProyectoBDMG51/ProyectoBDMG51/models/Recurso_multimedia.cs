@@ -12,6 +12,11 @@ namespace ProyectoBDMG51.models
         private string tituloRecurso;
         private DateTime fechaCreacionR;
         private string descripcionRecurso;
+        private string archivoRecurso;
+        private int idDocenteFK;
+        private int idEstudianteFK;
+        private int idAsignaturaFK;
+        private int idTRFK;
 
         public Recurso_multimedia()
         {
