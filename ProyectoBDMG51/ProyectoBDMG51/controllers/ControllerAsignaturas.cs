@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProyectoBDMG51.models;
+
 namespace ProyectoBDMG51.controllers
 {
     class ControllerAsignaturas
     {
         bool InsertAsignatura(Asignaturas objA){
-        bool resultado=false
+            bool resultado = false;
 
-            string sql = "insert into asignaturas(nombreAsignatura) values ('" + objA.nombreAsignatura +  "')";
+            string sql = "insert into asignaturas(nombreAsignatura) values ('" + objA.NombreAsignatura +  "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado= objCBD.ExecuteQuery(sql);
             return resultado;

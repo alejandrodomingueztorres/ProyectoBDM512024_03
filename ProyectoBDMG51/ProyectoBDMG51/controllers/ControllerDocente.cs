@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ProyectoBDMG51.models
+using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.controllers
 {
     class ControllerDocente
     {
         bool InsertDocente(Docente objD){
-        bool resultado=false
+            bool resultado = false;
 
             string sql = "insert into Docente(nombreDocente, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 
-            objD.nombreDocente + "','"+ objD.nombreDocente2 + "','" + objD.apellidoDocente1 + "','" + objD.apellidoDocente2 + "','" + objD.identificacionDocente +
-            "','" + objD.correoD + "','" + objD.passwordD + "')";
+            objD.NombreDocente1 + "','"+ objD.NombreDocente2 + "','" + objD.ApellidoDocente1 + "','" + objD.ApellidoDocente2 + "','" + objD.IdentificacionDocente +
+            "','" + objD.CorreoD + "','" + objD.PasswordD + "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado= objCBD.ExecuteQuery(sql);
             return resultado;
