@@ -25,5 +25,10 @@ namespace ProyectoBDMG51.views
             string archivoRecurso = textBox4.Text;
             string aprobacion = textBox5.Text;
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
