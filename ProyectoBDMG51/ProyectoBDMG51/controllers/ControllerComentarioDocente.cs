@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerComentarioDocente
     {
-        bool InsertComentarioDocente(Comentario_docente objCD)
+        public bool InsertComentarioDocente(Comentario_docente objCD)
         {
             bool resultado = false;
 

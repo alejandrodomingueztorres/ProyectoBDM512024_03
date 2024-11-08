@@ -10,7 +10,7 @@ namespace ProyectoBDMG51.models
     {
         private int idRecursoM;
         private string tituloRecurso;
-        private DateTime fechaCreacionR;
+        private string fechaCreacionR;
         private string descripcionRecurso;
         private string archivoRecurso;
         private int idDocenteFK;
@@ -22,7 +22,18 @@ namespace ProyectoBDMG51.models
         {
         }
 
-        public Recurso_multimedia(int idRecursoM, string tituloRecurso, DateTime fechaCreacionR, string descripcionRecurso)
+        public Recurso_multimedia(string tituloRecurso, string descripcionRecurso, string archivoRecurso, int idDocenteFK, int idEstudianteFK, int idAsignaturaFK, int idTRFK)
+        {
+            this.tituloRecurso = tituloRecurso;
+            this.descripcionRecurso = descripcionRecurso;
+            this.archivoRecurso = archivoRecurso;
+            this.idDocenteFK = idDocenteFK;
+            this.idEstudianteFK = idEstudianteFK;
+            this.idAsignaturaFK = idAsignaturaFK;
+            this.idTRFK = idTRFK;
+        }
+
+        public Recurso_multimedia(int idRecursoM, string tituloRecurso, string fechaCreacionR, string descripcionRecurso)
         {
             this.idRecursoM = idRecursoM;
             this.tituloRecurso = tituloRecurso;
@@ -30,9 +41,18 @@ namespace ProyectoBDMG51.models
             this.descripcionRecurso = descripcionRecurso;
         }
 
+        public Recurso_multimedia(int idRecursoM, string tituloRecurso, string fechaCreacionR, string descripcionRecurso, string archivoRecurso, int idDocenteFK, int idEstudianteFK, int idAsignaturaFK, int idTRFK) : this(idRecursoM, tituloRecurso, fechaCreacionR, descripcionRecurso)
+        {
+            this.archivoRecurso = archivoRecurso;
+            this.idDocenteFK = idDocenteFK;
+            this.idEstudianteFK = idEstudianteFK;
+            this.idAsignaturaFK = idAsignaturaFK;
+            this.idTRFK = idTRFK;
+        }
+
         public int IdRecursoM { get => idRecursoM; set => idRecursoM = value; }
         public string TituloRecurso { get => tituloRecurso; set => tituloRecurso = value; }
-        public DateTime FechaCreacionR { get => fechaCreacionR; set => fechaCreacionR = value; }
+        public string FechaCreacionR { get => fechaCreacionR; set => fechaCreacionR = value; }
         public string DescripcionRecurso { get => descripcionRecurso; set => descripcionRecurso = value; }
         public int IdTRFK { get => idTRFK; set => idTRFK = value; }
         public string ArchivoRecurso { get => archivoRecurso; set => archivoRecurso = value; }

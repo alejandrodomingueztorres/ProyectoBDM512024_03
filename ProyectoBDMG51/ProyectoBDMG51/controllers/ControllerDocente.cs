@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerDocente
     {
-        bool InsertDocente(Docente objD){
+        public bool InsertDocente(Docente objD){
             bool resultado = false;
 
             string sql = "insert into Docente(nombreDocente, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 

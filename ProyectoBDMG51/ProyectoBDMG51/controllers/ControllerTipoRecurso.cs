@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerTipoRecurso
     {
-        bool InsertTipoRecurso(TipoRecurso objTR)
+        public bool InsertTipoRecurso(TipoRecurso objTR)
         {
             bool resultado = false;
 

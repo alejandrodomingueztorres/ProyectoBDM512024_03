@@ -29,7 +29,7 @@ namespace ProyectoBDMG51.views
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Insert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,19 +37,19 @@ namespace ProyectoBDMG51.views
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Show = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // Insert
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(177, 153);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insert.Location = new System.Drawing.Point(177, 153);
+            this.Insert.Name = "Insert";
+            this.Insert.Size = new System.Drawing.Size(86, 29);
+            this.Insert.TabIndex = 2;
+            this.Insert.Text = "Agregar";
+            this.Insert.UseVisualStyleBackColor = true;
+            this.Insert.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -113,22 +113,22 @@ namespace ProyectoBDMG51.views
             this.textBox2.Size = new System.Drawing.Size(146, 20);
             this.textBox2.TabIndex = 9;
             // 
-            // button2
+            // Show
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(177, 269);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 29);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Show.Location = new System.Drawing.Point(177, 269);
+            this.Show.Name = "Show";
+            this.Show.Size = new System.Drawing.Size(86, 29);
+            this.Show.TabIndex = 10;
+            this.Show.Text = "Buscar";
+            this.Show.UseVisualStyleBackColor = true;
             // 
             // UIAsignaturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(762, 416);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Show);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -136,7 +136,7 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Insert);
             this.Name = "UIAsignaturas";
             this.Text = "UIAsignaturas";
             this.ResumeLayout(false);
@@ -145,7 +145,7 @@ namespace ProyectoBDMG51.views
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -153,6 +153,6 @@ namespace ProyectoBDMG51.views
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Show;
     }
 }

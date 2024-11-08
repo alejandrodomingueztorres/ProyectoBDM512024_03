@@ -34,18 +34,20 @@ namespace ProyectoBDMG51.views
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ShowTR = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // InsertTR
             // 
-            this.InsertTR.Location = new System.Drawing.Point(224, 126);
+            this.InsertTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.InsertTR.Location = new System.Drawing.Point(214, 126);
             this.InsertTR.Name = "InsertTR";
-            this.InsertTR.Size = new System.Drawing.Size(75, 23);
+            this.InsertTR.Size = new System.Drawing.Size(85, 28);
             this.InsertTR.TabIndex = 0;
             this.InsertTR.Text = "Insertar";
             this.InsertTR.UseVisualStyleBackColor = true;
+            this.InsertTR.Click += new System.EventHandler(this.InsertTR_Click);
             // 
             // textBox1
             // 
@@ -80,14 +82,15 @@ namespace ProyectoBDMG51.views
             this.label2.TabIndex = 4;
             this.label2.Text = "Nombre del Recurso:";
             // 
-            // button1
+            // ShowTR
             // 
-            this.button1.Location = new System.Drawing.Point(524, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Mostrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ShowTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.ShowTR.Location = new System.Drawing.Point(514, 126);
+            this.ShowTR.Name = "ShowTR";
+            this.ShowTR.Size = new System.Drawing.Size(85, 28);
+            this.ShowTR.TabIndex = 5;
+            this.ShowTR.Text = "Mostrar";
+            this.ShowTR.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -105,7 +108,7 @@ namespace ProyectoBDMG51.views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 258);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ShowTR);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -125,7 +128,7 @@ namespace ProyectoBDMG51.views
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ShowTR;
         private System.Windows.Forms.Label label3;
     }
 }

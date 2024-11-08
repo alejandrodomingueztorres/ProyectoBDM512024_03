@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerRecursoMultimedia
     {
-        bool InsertRecursoMultimedia(Recurso_multimedia objRM)
+        public bool InsertRecursoMultimedia(Recurso_multimedia objRM)
         {
             bool resultado = false;
 

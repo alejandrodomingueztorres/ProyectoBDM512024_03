@@ -15,6 +15,11 @@ namespace ProyectoBDMG51.models
         {
         }
 
+        public Asignaturas(string nombreAsignatura)
+        {
+            this.nombreAsignatura = nombreAsignatura;
+        }
+
         public Asignaturas(int idAsignatura, string nombreAsignatura)
         {
             this.idAsignatura = idAsignatura;

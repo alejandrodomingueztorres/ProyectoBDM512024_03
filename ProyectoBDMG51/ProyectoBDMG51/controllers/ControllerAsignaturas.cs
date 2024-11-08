@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerAsignaturas
     {
-        bool InsertAsignatura(Asignaturas objA){
+        public bool InsertAsignatura(Asignaturas objA){
             bool resultado = false;
 
             string sql = "insert into asignaturas(nombreAsignatura) values ('" + objA.NombreAsignatura +  "')";
