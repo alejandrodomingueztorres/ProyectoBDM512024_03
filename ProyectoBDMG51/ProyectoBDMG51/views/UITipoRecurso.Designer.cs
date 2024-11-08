@@ -92,10 +92,10 @@ namespace ProyectoBDMG51.views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.label3.Location = new System.Drawing.Point(210, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(283, 37);
+            this.label3.Size = new System.Drawing.Size(192, 26);
             this.label3.TabIndex = 6;
             this.label3.Text = "Tipos de Recursos";
             // 

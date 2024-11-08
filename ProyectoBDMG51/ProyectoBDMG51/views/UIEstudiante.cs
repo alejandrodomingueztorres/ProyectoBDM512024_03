@@ -25,5 +25,10 @@ namespace ProyectoBDMG51.views
             string identificacionE = textBox4.Text;
             string passwordE = textBox5.Text;
         }
+
+        private void UIEstudiante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
