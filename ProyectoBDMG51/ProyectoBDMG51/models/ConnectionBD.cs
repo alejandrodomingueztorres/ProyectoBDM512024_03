@@ -32,6 +32,11 @@ namespace ProyectoBDMG51.models
             connManager.Close();
         }
 
+        internal bool ExecuteQuery(string sql, string archivoRecurso)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool ExecuteQuery(string sql)
         {
             bool result = false;

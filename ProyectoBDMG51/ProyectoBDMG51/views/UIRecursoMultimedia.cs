@@ -12,6 +12,7 @@ namespace ProyectoBDMG51.views
 {
     public partial class UIRecursoMultimedia : Form
     {
+        string rutaRecurso;
         public UIRecursoMultimedia()
         {
             InitializeComponent();
@@ -22,10 +23,21 @@ namespace ProyectoBDMG51.views
             string tituloRecurso = textBox1.Text;
             string descripcionRecurso = textBox2.Text;
         }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
+            try
+            {
+                OpenFileDialog openFileDialog1 = new OpenFileDialog();
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    rutaRecurso = openFileDialog1.FileName;
+                    Console.WriteLine("Name File " + rutaRecurso);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
