@@ -19,5 +19,16 @@ namespace ProyectoBDMG51.controllers
             resultado= objCBD.ExecuteQuery(sql);
             return resultado;
         }
+
+        public bool LoginEstudiante(Estudiante objE)
+        {
+            bool resultado = false;
+
+            string sql = "select * from estudiante where correo =" + objE.CorreoE;
+            ConnectionBD objCBD = new ConnectionBD();
+            resultado = objCBD.Login(sql, objE.PasswordE);
+
+            return resultado;
+        }
     }
 }

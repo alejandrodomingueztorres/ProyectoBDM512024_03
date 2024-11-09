@@ -14,10 +14,10 @@ namespace ProyectoBDMG51.controllers
             bool resultado = false;
 
             string sql = "insert into recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso, idDocenteFK, idEstudianteFK, idAsignaturaFK, idTRFK) values ('" +
-            objRM.TituloRecurso + "','" + objRM.DescripcionRecurso + "','" + objRM.ArchivoRecurso + "','" + objRM.IdDocenteFK + "','" + objRM.IdEstudianteFK +
+            objRM.TituloRecurso + "','" + objRM.DescripcionRecurso + "','" + "@archivoRecurso" + "','" + objRM.IdDocenteFK + "','" + objRM.IdEstudianteFK +
             "','" + objRM.IdAsignaturaFK + "','" + objRM.IdTRFK + "')";
             ConnectionBD objCBD = new ConnectionBD();
-            resultado = objCBD.ExecuteQuery(sql);
+            resultado = objCBD.ExecuteQuery(sql, objRM.ArchivoRecurso);
             return resultado;
         }
     }

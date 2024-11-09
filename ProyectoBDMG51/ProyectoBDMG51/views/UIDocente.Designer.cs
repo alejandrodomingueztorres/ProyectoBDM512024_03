@@ -48,12 +48,22 @@ namespace ProyectoBDMG51.views
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.ShowD = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Insert
             // 
             this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Insert.Location = new System.Drawing.Point(147, 265);
+            this.Insert.Location = new System.Drawing.Point(147, 290);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(126, 28);
             this.Insert.TabIndex = 10;
@@ -171,9 +181,9 @@ namespace ProyectoBDMG51.views
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.Location = new System.Drawing.Point(363, 52);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 20);
+            this.label7.Size = new System.Drawing.Size(104, 20);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Buscar";
+            this.label7.Text = "Iniciar Sesión";
             // 
             // label8
             // 
@@ -186,7 +196,7 @@ namespace ProyectoBDMG51.views
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(402, 79);
+            this.textBox8.Location = new System.Drawing.Point(436, 79);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(168, 20);
             this.textBox8.TabIndex = 26;
@@ -194,28 +204,117 @@ namespace ProyectoBDMG51.views
             // ShowD
             // 
             this.ShowD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.ShowD.Location = new System.Drawing.Point(481, 112);
+            this.ShowD.Location = new System.Drawing.Point(515, 179);
             this.ShowD.Name = "ShowD";
             this.ShowD.Size = new System.Drawing.Size(89, 26);
             this.ShowD.TabIndex = 27;
-            this.ShowD.Text = "Buscar";
+            this.ShowD.Text = "Ingresar";
             this.ShowD.UseVisualStyleBackColor = true;
+            this.ShowD.Click += new System.EventHandler(this.ShowD_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label9.Location = new System.Drawing.Point(213, 22);
+            this.label9.Location = new System.Drawing.Point(176, 26);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 26);
+            this.label9.Size = new System.Drawing.Size(274, 26);
             this.label9.TabIndex = 28;
-            this.label9.Text = "Docentes";
+            this.label9.Text = "Acceso a la Base de Datos";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 10);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(66, 17);
+            this.radioButton1.TabIndex = 29;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Docente";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(73, 10);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(75, 17);
+            this.radioButton2.TabIndex = 30;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Estudiante";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(119, 250);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(154, 34);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Rol";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(358, 120);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Contraseña:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(436, 117);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(168, 20);
+            this.textBox9.TabIndex = 33;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton4);
+            this.groupBox2.Controls.Add(this.radioButton3);
+            this.groupBox2.Location = new System.Drawing.Point(436, 143);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(168, 28);
+            this.groupBox2.TabIndex = 34;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Rol";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 10);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(66, 17);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Docente";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(87, 10);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(75, 17);
+            this.radioButton4.TabIndex = 1;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Estudiante";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // UIDocente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ShowD);
             this.Controls.Add(this.textBox8);
@@ -237,6 +336,10 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.Insert);
             this.Name = "UIDocente";
             this.Text = "UIDocente";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +365,13 @@ namespace ProyectoBDMG51.views
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button ShowD;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }

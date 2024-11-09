@@ -32,9 +32,42 @@ namespace ProyectoBDMG51.models
             connManager.Close();
         }
 
-        internal bool ExecuteQuery(string sql, string archivoRecurso)
+        public bool ExecuteQuery(string sql, string archivoRecurso)
         {
-            throw new NotImplementedException();
+            bool result = false;
+            FileStream fs;
+            BinaryReader br;
+            try
+            {
+                byte[] ImageData;
+                fs = new FileStream(archivoRecurso, FileMode.Open, FileAccess.Read);
+                br = new BinaryReader(fs);
+                ImageData = br.ReadBytes((int)fs.Lenght);
+                br.Close();
+                fs.Close();
+
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                cmd.Parameters.Add("@archivoRecurso", MySqlObType.LongBlob);
+                cmd.Parameters["@archivoRecurso"].Value = ImageData;
+
+                ConnectOpened();
+                int RowsAffected = cmd.ExecuteNonQuery();
+                if(RowsAffected > 0)
+                {
+                    result = true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR " + e);
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
+            }
+
+            return result;
         }
 
         public bool ExecuteQuery(string sql)
@@ -59,6 +92,28 @@ namespace ProyectoBDMG51.models
                 ConnectClosed();
             }
             return result;
+        }
+        public bool Login(string sql, string password)
+        {
+            bool resultado = false;
+
+            MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+            ConnectOpened();
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                reader.Read();
+                string contrasenaGuardada = reader["password"].ToString();
+                if (password.Equals(contrasenaGuardada))
+                {
+                    resultado = true;
+                }
+
+            }
+
+            return resultado;
         }
     }
 }

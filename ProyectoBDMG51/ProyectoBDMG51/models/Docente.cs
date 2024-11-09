@@ -21,6 +21,12 @@ namespace ProyectoBDMG51.models
         {
         }
 
+        public Docente(string correoD, string passwordD)
+        {
+            this.correoD = correoD;
+            this.passwordD = passwordD;
+        }
+
         public Docente(string nombreDocente1, string nombreDocente2, string apellidoDocente1, string apellidoDocente2, string identificacionDocente, string correoD, string passwordD)
         {
             this.nombreDocente1 = nombreDocente1;
