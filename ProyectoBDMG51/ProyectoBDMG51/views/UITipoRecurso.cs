@@ -7,25 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoBDMG51.models;
 using ProyectoBDMG51.controllers;
+using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.views
 {
-    public partial class UIAsignaturas : Form
+    public partial class UITipoRecurso : Form
     {
-        public UIAsignaturas()
+        public UITipoRecurso()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            string nombreAsignatura = textBox1.Text;
 
-            Asignaturas objA = new Asignaturas(nombreAsignatura);
-            ControllerAsignaturas objCA = new ControllerAsignaturas();
-            bool resultado = objCA.InsertAsignatura(objA);
+        }
+
+        private void InsertTR_Click(object sender, EventArgs e)
+        {
+            string nombreTR = textBox1.Text;
+
+            TipoRecurso objTR = new TipoRecurso(nombreTR);
+            ControllerTipoRecurso objCTR = new ControllerTipoRecurso();
+            bool resultado = objCTR.InsertTipoRecurso(objTR);
 
             if (resultado)
             {

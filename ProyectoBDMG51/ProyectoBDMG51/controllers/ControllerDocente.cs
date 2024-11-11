@@ -9,22 +9,25 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerDocente
     {
-        bool InsertDocente(Docente objD){
+        public bool InsertDocente(Docente objD){
             bool resultado = false;
 
-            string sql = "insert into Docente(nombreDocente, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 
+            string sql = "insert into docente(nombreDocente, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 
             objD.NombreDocente1 + "','"+ objD.NombreDocente2 + "','" + objD.ApellidoDocente1 + "','" + objD.ApellidoDocente2 + "','" + objD.IdentificacionDocente +
             "','" + objD.CorreoD + "','" + objD.PasswordD + "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado= objCBD.ExecuteQuery(sql);
             return resultado;
         }
-        private string nombreDocente1;
-        private string nombreDocente2;
-        private string apellidoDocente1;
-        private string apellidoDocente2;
-        private string identificacionDocente;
-        private string correoD;
-        private string passwordD;
+        public bool LoginDocente(Docente objD)
+        {
+            bool resultado = false;
+
+            string sql = "select * from docente where correo =" + objD.CorreoD;
+            ConnectionBD objCBD = new ConnectionBD();
+            resultado = objCBD.Login(sql, objD.PasswordD);
+
+            return resultado;
+        }
     }
 }

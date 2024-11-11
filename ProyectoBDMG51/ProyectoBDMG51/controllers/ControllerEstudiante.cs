@@ -9,7 +9,7 @@ namespace ProyectoBDMG51.controllers
 {
     class ControllerEstudiante
     {
-        bool InsertEstudiante(Estudiante objE){
+        public bool InsertEstudiante(Estudiante objE){
             bool resultado = false;
 
             string sql = "insert into estudiante(nombreEstudiante1, nombreEstudiante2, apellidoEstudiante1, apellidoEstudiante2, identificacionE, correoE, passwordE) values ('" + 
@@ -17,6 +17,17 @@ namespace ProyectoBDMG51.controllers
             "','" + objE.CorreoE + "','" + objE.PasswordE + "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado= objCBD.ExecuteQuery(sql);
+            return resultado;
+        }
+
+        public bool LoginEstudiante(Estudiante objE)
+        {
+            bool resultado = false;
+
+            string sql = "select * from estudiante where correo =" + objE.CorreoE;
+            ConnectionBD objCBD = new ConnectionBD();
+            resultado = objCBD.Login(sql, objE.PasswordE);
+
             return resultado;
         }
     }

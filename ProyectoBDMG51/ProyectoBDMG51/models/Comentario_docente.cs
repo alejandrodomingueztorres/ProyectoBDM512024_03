@@ -18,6 +18,13 @@ namespace ProyectoBDMG51.models
         {
         }
 
+        public Comentario_docente(string contenidoComentarioD, int idRecursoMFK, int idDocenteFK)
+        {
+            this.contenidoComentarioD = contenidoComentarioD;
+            this.idRecursoMFK = idRecursoMFK;
+            this.idDocenteFK = idDocenteFK;
+        }
+
         public Comentario_docente(int idComentarioD, string contenidoComentarioD, DateTime fechaComentarioD, int idRecursoMFK, int idDocenteFK)
         {
             this.idComentarioD = idComentarioD;

@@ -7,14 +7,13 @@ using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.controllers
 {
-    class ControllerComentarioDocente
+    class ControllerTipoRecurso
     {
-        public bool InsertComentarioDocente(Comentario_docente objCD)
+        public bool InsertTipoRecurso(TipoRecurso objTR)
         {
             bool resultado = false;
 
-            string sql = "insert into comentario_docente(contenidoComentarioD, idRecursoMFK, idDocenteFK) values ('" +
-            objCD.ContenidoComentarioD + "','" + objCD.IdRecursoMFK + "','" + objCD.IdDocenteFK + "')";
+            string sql = "insert into tipo_recursos(tipoRecurso) values ('" + objTR.TipoRecurso + "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado = objCBD.ExecuteQuery(sql);
             return resultado;
