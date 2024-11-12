@@ -26,7 +26,7 @@ namespace ProyectoBDMG51.controllers
         public bool InsertDocente(Docente objD){
             bool resultado = false;
 
-            string sql = "insert into docente(nombreDocente, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 
+            string sql = "insert into docente(nombreDocente1, nombreDocente2, apellidoDocente1, apellidoDocente2, identificacionDocente, correoD, passwordD) values ('" + 
             objD.NombreDocente1 + "','"+ objD.NombreDocente2 + "','" + objD.ApellidoDocente1 + "','" + objD.ApellidoDocente2 + "','" + objD.IdentificacionDocente +
             "','" + objD.CorreoD + "','" + objD.PasswordD + "')";
             ConnectionBD objCBD = new ConnectionBD();
