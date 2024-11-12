@@ -24,6 +24,13 @@ namespace ProyectoBDMG51.views
         {
             string tituloRecurso = textBox1.Text;
             string descripcionRecurso = textBox3.Text;
+            string archivoRecurso = textBox4.Text;
+            ControllerRecursoMultimedia objCRM = new ControllerRecursoMultimedia();
+            Recurso_multimedia objRM = new Recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso);
+            bool resultado = objCRM.InsertRecursoMultimedia(objRM);
+            if (resultado){ MessageBox.Show("Se insertó correctamente");
+            } else { MessageBox.Show("No se ha podido insertar"); 
+            }
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -33,6 +40,7 @@ namespace ProyectoBDMG51.views
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     rutaRecurso = openFileDialog1.FileName;
+                    textBox4.Text = rutaRecurso;
                     Console.WriteLine("Name File " + rutaRecurso);
                 }
             }
@@ -56,6 +64,11 @@ namespace ProyectoBDMG51.views
             ControllerComentarioDocente objectCCD = new ControllerComentarioDocente();
             _ = objectCCD.SelectComentarioDocente();
             dataGridView1.DataSource = consulta;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

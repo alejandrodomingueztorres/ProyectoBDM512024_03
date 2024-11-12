@@ -18,6 +18,13 @@ namespace ProyectoBDMG51.models
         private int idAsignaturaFK;
         private int idTRFK;
 
+        public Recurso_multimedia(string tituloRecurso, string descripcionRecurso, string archivoRecurso)
+        {
+            this.tituloRecurso = tituloRecurso;
+            this.descripcionRecurso = descripcionRecurso;
+            this.archivoRecurso = archivoRecurso;
+        }
+
         public Recurso_multimedia()
         {
         }

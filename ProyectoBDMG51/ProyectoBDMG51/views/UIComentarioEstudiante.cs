@@ -27,5 +27,10 @@ namespace ProyectoBDMG51.views
         {
 
         }
+
+        private void UIComentarioEstudiante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

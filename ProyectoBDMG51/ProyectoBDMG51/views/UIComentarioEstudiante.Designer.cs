@@ -42,10 +42,10 @@ namespace ProyectoBDMG51.views
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(349, 347);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(393, 434);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 36);
+            this.button1.Size = new System.Drawing.Size(138, 45);
             this.button1.TabIndex = 4;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,10 +55,10 @@ namespace ProyectoBDMG51.views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(159, 38);
+            this.label1.Location = new System.Drawing.Point(179, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 31);
+            this.label1.Size = new System.Drawing.Size(158, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Comentar";
             // 
@@ -66,38 +66,38 @@ namespace ProyectoBDMG51.views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(88, 110);
+            this.label2.Location = new System.Drawing.Point(99, 138);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(249, 25);
+            this.label2.Size = new System.Drawing.Size(307, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Buscar Recurso Multimedia";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 158);
+            this.label3.Location = new System.Drawing.Point(105, 198);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Título:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(240, 154);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(270, 192);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 22);
+            this.textBox1.Size = new System.Drawing.Size(259, 26);
             this.textBox1.TabIndex = 8;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(349, 197);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(393, 246);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 33);
+            this.button2.Size = new System.Drawing.Size(138, 41);
             this.button2.TabIndex = 9;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
@@ -107,26 +107,26 @@ namespace ProyectoBDMG51.views
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label4.Location = new System.Drawing.Point(93, 256);
+            this.label4.Location = new System.Drawing.Point(105, 320);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
+            this.label4.Size = new System.Drawing.Size(118, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "Comentar";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 303);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Location = new System.Drawing.Point(109, 379);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(373, 22);
+            this.textBox2.Size = new System.Drawing.Size(419, 26);
             this.textBox2.TabIndex = 11;
             // 
             // UIComentarioEstudiante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -135,9 +135,10 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UIComentarioEstudiante";
             this.Text = "UIComentarioEstudiante";
+            this.Load += new System.EventHandler(this.UIComentarioEstudiante_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

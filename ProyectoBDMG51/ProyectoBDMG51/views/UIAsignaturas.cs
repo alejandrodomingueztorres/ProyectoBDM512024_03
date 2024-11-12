@@ -36,5 +36,10 @@ namespace ProyectoBDMG51.views
                 MessageBox.Show("No se ha podido insertar");
             }
         }
+
+        private void Show_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
