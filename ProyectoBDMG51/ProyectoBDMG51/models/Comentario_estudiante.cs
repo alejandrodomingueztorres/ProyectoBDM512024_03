@@ -13,7 +13,7 @@ namespace ProyectoBDMG51.models
     {
         private int idComentarioE;
         private string contenidoComentarioE;
-        private DateTime fechaComentarioE;
+        private string fechaComentarioE;
         private int idRecursoMFK;
         private int idEstudianteFK;
         ConnectionBD objConnection = new ConnectionBD();
@@ -57,7 +57,7 @@ namespace ProyectoBDMG51.models
             return consulta;
         }
 
-        public Comentario_estudiante(int idComentarioE, string contenidoComentarioE, DateTime fechaComentarioE, int idRecursoMFK, int idEstudianteFK)
+        public Comentario_estudiante(int idComentarioE, string contenidoComentarioE, string fechaComentarioE, int idRecursoMFK, int idEstudianteFK)
         {
             this.idComentarioE = idComentarioE;
             this.contenidoComentarioE = contenidoComentarioE;
@@ -68,7 +68,7 @@ namespace ProyectoBDMG51.models
 
         public int IdComentarioE { get => idComentarioE; set => idComentarioE = value; }
         public string ContenidoComentarioE { get => contenidoComentarioE; set => contenidoComentarioE = value; }
-        public DateTime FechaComentarioE { get => fechaComentarioE; set => fechaComentarioE = value; }
+        public string FechaComentarioE { get => fechaComentarioE; set => fechaComentarioE = value; }
         public int IdRecursoMFK { get => idRecursoMFK; set => idRecursoMFK = value; }
         public int IdEstudianteFK { get => idEstudianteFK; set => idEstudianteFK = value; }
     }
