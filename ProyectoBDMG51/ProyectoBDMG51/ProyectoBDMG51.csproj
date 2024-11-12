@@ -99,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controllers\ControllerAsignaturas.cs" />
+    <Compile Include="controllers\ControllerComentarioDocente.cs" />
+    <Compile Include="controllers\ControllerComentarioEstudiante.cs" />
+    <Compile Include="controllers\ControllerDocente.cs" />
+    <Compile Include="controllers\ControllerEstudiante.cs" />
+    <Compile Include="controllers\ControllerRecursoMultimedia.cs" />
+    <Compile Include="controllers\ControllerTipoRecurso.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,42 @@
     <Compile Include="views\UIAsignaturas.Designer.cs">
       <DependentUpon>UIAsignaturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\UIComentarioDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UIComentarioDocente.Designer.cs">
+      <DependentUpon>UIComentarioDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UIComentarioEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UIComentarioEstudiante.Designer.cs">
+      <DependentUpon>UIComentarioEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UIDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UIDocente.Designer.cs">
+      <DependentUpon>UIDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UIEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UIEstudiante.Designer.cs">
+      <DependentUpon>UIEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UIRecursoMultimedia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UIRecursoMultimedia.Designer.cs">
+      <DependentUpon>UIRecursoMultimedia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UITipoRecurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UITipoRecurso.Designer.cs">
+      <DependentUpon>UITipoRecurso.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +173,24 @@
     </Compile>
     <EmbeddedResource Include="views\UIAsignaturas.resx">
       <DependentUpon>UIAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UIComentarioDocente.resx">
+      <DependentUpon>UIComentarioDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UIComentarioEstudiante.resx">
+      <DependentUpon>UIComentarioEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UIDocente.resx">
+      <DependentUpon>UIDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UIEstudiante.resx">
+      <DependentUpon>UIEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UIRecursoMultimedia.resx">
+      <DependentUpon>UIRecursoMultimedia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UITipoRecurso.resx">
+      <DependentUpon>UITipoRecurso.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

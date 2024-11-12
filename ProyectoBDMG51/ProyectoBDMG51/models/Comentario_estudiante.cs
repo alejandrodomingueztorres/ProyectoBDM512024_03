@@ -1,8 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoBDMG51.models
 {
@@ -13,6 +16,7 @@ namespace ProyectoBDMG51.models
         private DateTime fechaComentarioE;
         private int idRecursoMFK;
         private int idEstudianteFK;
+        ConnectionBD objConnection = new ConnectionBD();
 
         public Comentario_estudiante()
         {
@@ -23,6 +27,34 @@ namespace ProyectoBDMG51.models
             this.contenidoComentarioE = contenidoComentarioE;
             this.idRecursoMFK = idRecursoMFK;
             this.idEstudianteFK = idEstudianteFK;
+        }
+
+        internal BindingSource SelectComentarioDocente(string sql)
+        {
+            BindingSource consulta = BindingSource();
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, objConnection.DataSource());
+                objConnection.ConnectOpened();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                consulta.DataSource = dt;
+
+            }
+            catch (Exception w)
+            {
+                Console.WriteLine("ERROOOOOOR" + w.Message);
+                objConnection.ConnectClosed();
+            }
+            finally
+            {
+                objConnection.ConnectClosed();
+            }
+
+            return consulta;
         }
 
         public Comentario_estudiante(int idComentarioE, string contenidoComentarioE, DateTime fechaComentarioE, int idRecursoMFK, int idEstudianteFK)

@@ -3,12 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.controllers
 {
     class ControllerComentarioEstudiante
     {
+
+        internal BindingSource SelectComentarioEstudiante()
+        {
+            BindingSource consulta = null;
+            string sql = "select concat(contenidoComentarioE, '') as 'Name ComentariosEstudiantes'," + " " +
+                "from comentario_estudiante ce";
+            Comentario_estudiante objComentarioEstudiante = new Comentario_estudiante();
+            consulta = objComentarioEstudiante.SelectComentarioDocente(sql);
+
+            return consulta;
+        }
+
         public bool InsertComentarioEstudiante(Comentario_estudiante objCE)
         {
             bool resultado = false;

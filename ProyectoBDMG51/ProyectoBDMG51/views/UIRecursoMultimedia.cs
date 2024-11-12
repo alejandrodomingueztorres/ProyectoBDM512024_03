@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoBDMG51.controllers;
+using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.views
 {
@@ -21,7 +23,7 @@ namespace ProyectoBDMG51.views
         private void button1_Click(object sender, EventArgs e)
         {
             string tituloRecurso = textBox1.Text;
-            string descripcionRecurso = textBox2.Text;
+            string descripcionRecurso = textBox3.Text;
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -38,6 +40,22 @@ namespace ProyectoBDMG51.views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void ShowRM_Click(object sender, EventArgs e)
+        {
+            string tituloRecurso = textBox2.Text;
+            ControllerAsignaturas objectCA = new ControllerAsignaturas();
+            BindingSource consulta = objectCA.SelectAsignatura();
+            ControllerEstudiante objectCE = new ControllerEstudiante();
+            _ = objectCE.SelectEstudiante();
+            ControllerDocente objectCD = new ControllerDocente();
+            _ = objectCD.SelectDocente();
+            ControllerComentarioEstudiante objectCCE = new ControllerComentarioEstudiante();
+            _ = objectCCE.SelectComentarioEstudiante();
+            ControllerComentarioDocente objectCCD = new ControllerComentarioDocente();
+            _ = objectCCD.SelectComentarioDocente();
+            dataGridView1.DataSource = consulta;
         }
     }
 }

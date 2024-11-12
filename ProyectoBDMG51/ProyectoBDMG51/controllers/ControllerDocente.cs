@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ProyectoBDMG51.models;
 
 namespace ProyectoBDMG51.controllers
 {
     class ControllerDocente
     {
+        internal BindingSource SelectDocente()
+        {
+            BindingSource consulta = null;
+            string sql = "select concat(d.nombreDocente1, '', d.apellidoDocente1) as 'Name Docentes'," + " " +
+                "from docente d";
+            Docente objDocente = new Docente();
+            consulta = objDocente.SelectDocente(sql);
+
+            return consulta;
+        }
+
+
+
         public bool InsertDocente(Docente objD){
             bool resultado = false;
 

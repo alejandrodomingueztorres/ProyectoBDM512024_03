@@ -1,8 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoBDMG51.models
 {
@@ -16,6 +19,7 @@ namespace ProyectoBDMG51.models
         private string correoE;
         private string identificacionE;
         private string passwordE;
+        ConnectionBD objConnection = new ConnectionBD(); 
 
         public Estudiante()
         {
@@ -25,6 +29,34 @@ namespace ProyectoBDMG51.models
         {
             this.correoE = correoE;
             this.passwordE = passwordE;
+        }
+
+        internal BindingSource SelectEstudiante(string sql)
+        {
+            BindingSource consulta = BindingSource();
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, objConnection.DataSource());
+                objConnection.ConnectOpened();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                consulta.DataSource = dt;
+
+            }
+            catch (Exception w)
+            {
+                Console.WriteLine("ERROOOOOOR" + w.Message);
+                objConnection.ConnectClosed();
+            }
+            finally
+            {
+                objConnection.ConnectClosed();
+            }
+
+            return consulta;
         }
 
         public Estudiante(string nombreEstudiante1, string nombreEstudiante2, string apellidoEstudiante1, string apellidoEstudiante2, string correoE, string identificacionE, string passwordE)
