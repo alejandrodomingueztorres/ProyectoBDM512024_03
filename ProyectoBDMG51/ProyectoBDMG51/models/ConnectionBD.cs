@@ -115,5 +115,15 @@ namespace ProyectoBDMG51.models
 
             return resultado;
         }
+        public string Reader(string sql)
+        {
+            bool resultado = false;
+
+            MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+
+            MySqlDataReader reader = cmd.
+
+            return resultado;
+        }
     }
 }
