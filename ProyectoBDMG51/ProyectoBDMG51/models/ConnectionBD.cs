@@ -115,5 +115,17 @@ namespace ProyectoBDMG51.models
 
             return resultado;
         }
+        public string ReaderComms(string sql, int filtro)
+        {
+            bool resultado = false;
+
+            sql += "WHERE idRecursoMFK = @idRecursoMFK";
+
+            MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+
+            MySqlDataReader reader = cmd.
+
+            return resultado;
+        }
     }
 }

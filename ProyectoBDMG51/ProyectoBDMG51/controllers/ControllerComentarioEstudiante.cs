@@ -32,5 +32,19 @@ namespace ProyectoBDMG51.controllers
             resultado = objCBD.ExecuteQuery(sql);
             return resultado;
         }
+
+        public string ReadComentariosEstudiante(Recurso_multimedia objM)
+        {
+            string resultado = "";
+
+            int idRecursoMFK = objM.IdRecursoM;
+            string sql = "SELECT idComentarioE, contenidoComentarioE, fechaComentarioE, idRecursoMFK, idEstudianteFK " +
+                     "FROM ComentariosEstudiantes ";
+
+            ConnectionBD objCBD = new ConnectionBD();
+            resultado = objCBD.ReaderComms(sql, idRecursoMFK);
+
+            return resultado;
+        }
     }
 }
