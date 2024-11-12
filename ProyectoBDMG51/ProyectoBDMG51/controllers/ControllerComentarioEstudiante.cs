@@ -35,16 +35,16 @@ namespace ProyectoBDMG51.controllers
 
         public string ReadComentariosEstudiante(Recurso_multimedia objM)
         {
-            string resultado = "";
+            List<Comentario_estudiante> Lista = new List<Comentario_estudiante>();
 
             int idRecursoMFK = objM.IdRecursoM;
             string sql = "SELECT idComentarioE, contenidoComentarioE, fechaComentarioE, idRecursoMFK, idEstudianteFK " +
                      "FROM ComentariosEstudiantes ";
 
             ConnectionBD objCBD = new ConnectionBD();
-            resultado = objCBD.ReaderComms(sql, idRecursoMFK);
+            Lista = objCBD.ReaderComentariosE(sql, idRecursoMFK);
 
-            return resultado;
+            return Lista;
         }
     }
 }

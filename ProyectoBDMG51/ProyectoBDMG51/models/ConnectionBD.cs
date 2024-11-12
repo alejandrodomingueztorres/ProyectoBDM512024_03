@@ -97,35 +97,109 @@ namespace ProyectoBDMG51.models
         {
             bool resultado = false;
 
-            MySqlCommand cmd = new MySqlCommand(sql, DataSource());
-            ConnectOpened();
-
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
+            try
             {
-                reader.Read();
-                string contrasenaGuardada = reader["password"].ToString();
-                if (password.Equals(contrasenaGuardada))
-                {
-                    resultado = true;
-                }
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                ConnectOpened();
 
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    string contrasenaGuardada = reader["password"].ToString();
+                    if (password.Equals(contrasenaGuardada))
+                    {
+                        resultado = true;
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERRRRRRRRROOOOOOR" + e.Message);
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
             }
 
             return resultado;
         }
-        public string ReaderComms(string sql, int filtro)
+        public List<Comentario_docente> ReaderComentariosD(string sql, int filtro)
         {
-            bool resultado = false;
+            List<Comentario_docente> ListaComentarios = new List<Comentario_docente>();
 
             sql += "WHERE idRecursoMFK = @idRecursoMFK";
 
-            MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                cmd.Parameters.AddWithValue("@idRecursoMFK", filtro);
+                ConnectOpened();
 
-            MySqlDataReader reader = cmd.
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comentario_docente comentario = new Comentario_docente(
+                        reader.GetInt32("idComentarioD"),
+                        reader.GetString("contenidoComentarioD"),
+                        reader.GetString("fechaComentarioD"),
+                        reader.GetInt32("idRecursoMFK"),
+                        reader.GetInt32("idDocenteFK")
+                    );
+                    ListaComentarios.Add(comentario);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERRRROOOOORRRRR" + e.Message);
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
+            }
+            return ListaComentarios;
+        }
+        public List<Comentario_estudiante> ReaderComentariosE(string sql, int filtro)
+        {
+            List<Comentario_estudiante> ListaComentarios = new List<Comentario_estudiante>();
 
-            return resultado;
+            sql += "WHERE idRecursoMFK = @idRecursoMFK";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                cmd.Parameters.AddWithValue("@idRecursoMFK", filtro);
+                ConnectOpened();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comentario_estudiante comentario = new Comentario_estudiante(
+                        reader.GetInt32("idComentarioE"),
+                        reader.GetString("contenidoComentarioE"),
+                        reader.GetString("fechaComentarioE"),
+                        reader.GetInt32("idRecursoMFK"),
+                        reader.GetInt32("idEstudianteFK")
+                    );
+                    ListaComentarios.Add(comentario);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERRRROOOOORRRRR" + e.Message);
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
+            }
+            return ListaComentarios;
         }
     }
 }
