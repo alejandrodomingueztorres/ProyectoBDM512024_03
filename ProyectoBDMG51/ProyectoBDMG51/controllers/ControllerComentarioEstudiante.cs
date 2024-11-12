@@ -33,7 +33,7 @@ namespace ProyectoBDMG51.controllers
             return resultado;
         }
 
-        public string ReadComentariosEstudiante(Recurso_multimedia objM)
+        public List<Comentario_estudiante> ReadComentariosEstudiante(Recurso_multimedia objM, List<Comentario_estudiante> Lista2)
         {
             List<Comentario_estudiante> Lista = new List<Comentario_estudiante>();
 

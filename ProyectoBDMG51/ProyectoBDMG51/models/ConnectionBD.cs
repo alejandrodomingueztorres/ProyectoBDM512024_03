@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,12 +43,12 @@ namespace ProyectoBDMG51.models
                 byte[] ImageData;
                 fs = new FileStream(archivoRecurso, FileMode.Open, FileAccess.Read);
                 br = new BinaryReader(fs);
-                ImageData = br.ReadBytes((int)fs.Lenght);
+                ImageData = br.ReadBytes((int)fs.Length);
                 br.Close();
                 fs.Close();
 
                 MySqlCommand cmd = new MySqlCommand(sql, DataSource());
-                cmd.Parameters.Add("@archivoRecurso", MySqlObType.LongBlob);
+                cmd.Parameters.Add("@archivoRecurso", MySqlDbType.LongBlob);
                 cmd.Parameters["@archivoRecurso"].Value = ImageData;
 
                 ConnectOpened();
@@ -145,7 +146,7 @@ namespace ProyectoBDMG51.models
                     Comentario_docente comentario = new Comentario_docente(
                         reader.GetInt32("idComentarioD"),
                         reader.GetString("contenidoComentarioD"),
-                        reader.GetString("fechaComentarioD"),
+                        reader.GetDateTime("fechaComentarioD"),
                         reader.GetInt32("idRecursoMFK"),
                         reader.GetInt32("idDocenteFK")
                     );

@@ -31,7 +31,7 @@ namespace ProyectoBDMG51.models
 
         internal BindingSource SelectComentarioDocente(string sql)
         {
-            BindingSource consulta = BindingSource();
+            BindingSource consulta = new BindingSource();
 
             try
             {

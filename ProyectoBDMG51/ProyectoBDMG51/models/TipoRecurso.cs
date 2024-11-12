@@ -27,6 +27,6 @@ namespace ProyectoBDMG51.models
         }
 
         public int IdTR { get => idTR; set => idTR = value; }
-        public string TipoRecurso { get => tipoRecurso; set => tipoRecurso = value; }
+        public string TipoRecursos { get => tipoRecurso; set => tipoRecurso = value; }
     }
 }

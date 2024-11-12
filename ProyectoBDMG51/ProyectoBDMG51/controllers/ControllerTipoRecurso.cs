@@ -13,7 +13,7 @@ namespace ProyectoBDMG51.controllers
         {
             bool resultado = false;
 
-            string sql = "insert into tipo_recursos(tipoRecurso) values ('" + objTR.TipoRecurso + "')";
+            string sql = "insert into tipo_recursos(tipoRecurso) values ('" + objTR.TipoRecursos + "')";
             ConnectionBD objCBD = new ConnectionBD();
             resultado = objCBD.ExecuteQuery(sql);
             return resultado;

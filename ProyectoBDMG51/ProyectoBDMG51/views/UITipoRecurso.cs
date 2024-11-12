@@ -41,5 +41,10 @@ namespace ProyectoBDMG51.views
                 MessageBox.Show("No se ha podido insertar");
             }
         }
+
+        private void UITipoRecurso_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
