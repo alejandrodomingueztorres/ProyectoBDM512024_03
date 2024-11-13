@@ -71,7 +71,7 @@ namespace ProyectoBDMG51.models
             return result;
         }
 
-        public bool ExecuteQuery(string sql)
+        public bool ExecuteQuery(string sql, Dictionary<string, object> dictionary)
         {
             bool result = false;
             try

@@ -1,31 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoBDMG51.models;
 
+
 namespace ProyectoBDMG51.controllers
 {
     class ControllerAsignaturas
     {
-        internal BindingSource SelectAsignatura()
+        internal DataTable SelectAsignaturaDataTable(string nombreAsignatura)
         {
-            BindingSource consulta = null;
-            string sql = "select concat(a.nombreAsignatura, '') as 'Name Asignatura'," + " " +
-                "from asignaturas a";
-            Asignaturas objAsignaturas = new Asignaturas();
-            consulta = objAsignaturas.SelectAsignatura(sql);
+            string sql = "SELECT nombreAsignatura AS 'Nombre Asignatura' FROM asignaturas WHERE nombreAsignatura LIKE @nombreAsignatura";
 
-            return consulta;
+            
+            DataTable dt = new DataTable();
+            ConnectionBD objCBD = new ConnectionBD();
+            Asignaturas objAsignaturas = new Asignaturas();
+            dt = objAsignaturas.SelectAsignaturaDataTable(sql, new Dictionary<string, object> {
+                {"@nombreAsignatura", "%" + nombreAsignatura + "%"}  
+            });
+
+            return dt; 
         }
         public bool InsertAsignatura(Asignaturas objA){
             bool resultado = false;
 
             string sql = "insert into asignaturas(nombreAsignatura) values ('" + objA.NombreAsignatura +  "')";
             ConnectionBD objCBD = new ConnectionBD();
-            resultado= objCBD.ExecuteQuery(sql);
+            resultado= objCBD.ExecuteQuery(sql, new Dictionary<string, object> {
+                {"@nombreAsignatura", objA.NombreAsignatura }
+            });
             return resultado;
 
 

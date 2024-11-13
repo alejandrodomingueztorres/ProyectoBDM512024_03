@@ -13,7 +13,7 @@ namespace ProyectoBDMG51.models
     {
         private int idAsignatura;
         private string nombreAsignatura;
-        ConnectionBD objConnection = new ConnectionBD();
+        private ConnectionBD objConnection = new ConnectionBD();
 
         public Asignaturas()
         {
@@ -30,32 +30,38 @@ namespace ProyectoBDMG51.models
             this.nombreAsignatura = nombreAsignatura;
         }
 
-        internal BindingSource SelectAsignatura(string sql)
+       
+
+        
+        public DataTable SelectAsignaturaDataTable(string sql, Dictionary<string, object> parameters)
         {
-            BindingSource consulta = new BindingSource();
-            
+            DataTable dt = new DataTable();
+
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, objConnection.DataSource());
+
+                
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.AddWithValue(param.Key, param.Value);
+                }
+
                 objConnection.ConnectOpened();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                consulta.DataSource = dt; 
-
-            } catch (Exception w)
+            }
+            catch (Exception ex)
             {
-                Console.WriteLine("ERROOOOOOR" + w.Message);
-                objConnection.ConnectClosed();
+                Console.WriteLine("Error: " + ex.Message);
             }
             finally
             {
                 objConnection.ConnectClosed();
             }
 
-            return consulta;
-
+            return dt;
         }
 
         public int IdAsignatura { get => idAsignatura; set => idAsignatura = value; }
