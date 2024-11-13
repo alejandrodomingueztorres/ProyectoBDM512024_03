@@ -17,7 +17,7 @@ namespace ProyectoBDMG51
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UIRecursoMultimedia());
+            Application.Run(new UIDocente());
         }
     }
 }

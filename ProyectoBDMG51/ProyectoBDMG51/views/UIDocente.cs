@@ -38,15 +38,6 @@ namespace ProyectoBDMG51.views
             {
                 MessageBox.Show("Por favor ingrese datos");
             }
-
-            if (radioButton1.Checked)
-            {
-                rol = 1;
-            }
-            if (radioButton2.Checked)
-            {
-                rol = 2;
-            }
             if (!radioButton1.Checked && !radioButton2.Checked)
             {
                 switch (rol)
@@ -80,12 +71,12 @@ namespace ProyectoBDMG51.views
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 1;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 2;
         }
 
         private void ShowD_Click(object sender, EventArgs e)
@@ -96,14 +87,6 @@ namespace ProyectoBDMG51.views
             if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Por favor ingrese su correo y contraseña.");
-            }
-            if (radioButton3.Checked)
-            {
-                rol = 1;
-            }
-            if (radioButton4.Checked)
-            {
-                rol = 2;
             }
             if (!radioButton3.Checked && !radioButton4.Checked)
             {
@@ -138,12 +121,12 @@ namespace ProyectoBDMG51.views
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 1;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 2;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
