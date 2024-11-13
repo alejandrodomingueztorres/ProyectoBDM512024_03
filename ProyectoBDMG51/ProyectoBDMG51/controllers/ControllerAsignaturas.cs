@@ -38,6 +38,21 @@ namespace ProyectoBDMG51.controllers
 
 
         }
+        public List<string> ListarAsignaturas(string filtro)
+        {
+            string sql = "SELECT nombreAsignatura FROM Asignaturas";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<string> lista = objCBD.ObtenerLista(sql, "nombreAsignatura", filtro);
+            return lista;
+        }
+        public List<int> obtenerId(string filtro)
+        {
+            string sql = "SELECT idAsignatura FROM Asignaturas";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<int> lista = objCBD.ObtenerId(sql, "idAsignatura", filtro);
+
+            return lista;
+        }
     }
 
     

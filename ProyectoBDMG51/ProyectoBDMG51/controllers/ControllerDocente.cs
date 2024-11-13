@@ -43,5 +43,6 @@ namespace ProyectoBDMG51.controllers
 
             return resultado;
         }
+
     }
 }
