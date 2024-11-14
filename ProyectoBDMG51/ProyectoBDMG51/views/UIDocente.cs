@@ -16,6 +16,8 @@ namespace ProyectoBDMG51.views
     public partial class UIDocente : Form
     {
         int rol;
+        int id;
+
         public UIDocente()
         {
             InitializeComponent();
@@ -80,34 +82,26 @@ namespace ProyectoBDMG51.views
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 1;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 2;
         }
 
         private void ShowD_Click(object sender, EventArgs e)
         {
             string correo = textBox8.Text;
             string password = textBox9.Text;
-            bool resultado;
+            int resultado;
             if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Por favor ingrese su correo y contraseña.");
             }
-            if (radioButton3.Checked)
-            {
-                rol = 1;
-            }
-            if (radioButton4.Checked)
-            {
-                rol = 2;
-            }
             if (!radioButton3.Checked && !radioButton4.Checked)
             {
-                resultado = false;
+                resultado = 0;
                 switch (rol)
                 {
                     case 1:
@@ -121,14 +115,17 @@ namespace ProyectoBDMG51.views
                         resultado = objCE.LoginEstudiante(objE);
                         break;
                 }
-                if (resultado)
+                if (resultado !=0)
                 {
                     MessageBox.Show("Se ha ingresado correctamente");
+                    UIRecursoMultimedia UIRM = new UIRecursoMultimedia(id, rol);
+                    UIRM.Show();
                 }
                 else
                 {
                     MessageBox.Show("No se ha podido ingresar");
                 }
+                id = resultado;
             }
             else
             {
@@ -138,12 +135,12 @@ namespace ProyectoBDMG51.views
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 1;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-
+            rol = 2;
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

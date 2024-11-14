@@ -52,9 +52,9 @@ namespace ProyectoBDMG51.controllers
         }
         public List<int> obtenerId(string filtro)
         {
-            string sql = "SELECT idAsignatura FROM docente";
+            string sql = "SELECT idDocente FROM docente";
             ConnectionBD objCBD = new ConnectionBD();
-            List<int> lista = objCBD.ObtenerId(sql, "idAsignatura", filtro);
+            List<int> lista = objCBD.ObtenerId(sql, "idEstudiante", filtro);
 
             return lista;
         }

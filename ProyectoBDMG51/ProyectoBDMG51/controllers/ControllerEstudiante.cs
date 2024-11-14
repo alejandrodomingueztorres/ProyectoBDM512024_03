@@ -43,5 +43,20 @@ namespace ProyectoBDMG51.controllers
 
             return resultado;
         }
+        public List<string> ListarDocente(string filtro)
+        {
+            string sql = "SELECT nombreEstudiante1 FROM estudiante";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<string> lista = objCBD.ObtenerLista(sql, "nombreEstudiante1", filtro);
+            return lista;
+        }
+        public List<int> obtenerId(string filtro)
+        {
+            string sql = "SELECT idEstudiante FROM estudiante";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<int> lista = objCBD.ObtenerId(sql, "idEstudiante", filtro);
+
+            return lista;
+        }
     }
 }

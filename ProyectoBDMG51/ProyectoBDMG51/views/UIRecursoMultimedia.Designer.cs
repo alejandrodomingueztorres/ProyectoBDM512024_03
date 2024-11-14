@@ -250,6 +250,7 @@ namespace ProyectoBDMG51.views
             // 
             // comboBox4
             // 
+            this.comboBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(444, 313);
             this.comboBox4.Name = "comboBox4";
@@ -318,6 +319,7 @@ namespace ProyectoBDMG51.views
             this.label10.Size = new System.Drawing.Size(65, 17);
             this.label10.TabIndex = 33;
             this.label10.Text = "Docente:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -359,6 +361,7 @@ namespace ProyectoBDMG51.views
             // 
             // comboBox6
             // 
+            this.comboBox6.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Location = new System.Drawing.Point(443, 400);
             this.comboBox6.Name = "comboBox6";

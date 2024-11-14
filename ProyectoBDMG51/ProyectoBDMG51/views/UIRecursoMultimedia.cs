@@ -19,10 +19,23 @@ namespace ProyectoBDMG51.views
         int idDocente;
         int idTipoRecurso;
         int idEstudiante;
+        int rol;
+
+        
         List<string> asignaturas;
-        public UIRecursoMultimedia()
+        public UIRecursoMultimedia(int id, int rol)
         {
             InitializeComponent();
+            if (rol == 1)
+            {
+                idDocente = id;
+                label10.Text = "Docente";
+            }
+            else
+            {
+                idEstudiante = id;
+                label10.Text = "Estudiante";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +44,7 @@ namespace ProyectoBDMG51.views
             string descripcionRecurso = textBox3.Text;
             string archivoRecurso = textBox4.Text;
             ControllerRecursoMultimedia objCRM = new ControllerRecursoMultimedia();
-            Recurso_multimedia objRM = new Recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso, idDocente, 1, idAsignatura, idTipoRecurso);
+            Recurso_multimedia objRM = new Recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso, idDocente, idEstudiante, idAsignatura, idTipoRecurso);
             bool resultado = objCRM.InsertRecursoMultimedia(objRM);
             if (resultado){ MessageBox.Show("Se insertó correctamente");
             } else { MessageBox.Show("No se ha podido insertar"); 
@@ -116,6 +129,11 @@ namespace ProyectoBDMG51.views
             ControllerTipoRecurso objCTR = new ControllerTipoRecurso();
             comboBox5.DataSource = objCTR.ListarTiposRecurso(textBox7.Text);
             comboBox6.DataSource = objCTR.obtenerId(textBox7.Text);
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
