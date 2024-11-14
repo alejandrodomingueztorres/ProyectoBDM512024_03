@@ -43,7 +43,7 @@ namespace ProyectoBDMG51.controllers
 
             return resultado;
         }
-        public List<string> ListarDocente(string filtro)
+        public List<string> ListarEstudiante(string filtro)
         {
             string sql = "SELECT nombreEstudiante1 FROM estudiante";
             ConnectionBD objCBD = new ConnectionBD();

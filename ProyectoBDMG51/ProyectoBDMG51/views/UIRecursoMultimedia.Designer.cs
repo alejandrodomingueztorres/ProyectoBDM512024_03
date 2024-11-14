@@ -310,6 +310,7 @@ namespace ProyectoBDMG51.views
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(164, 22);
             this.textBox6.TabIndex = 32;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label10
             // 

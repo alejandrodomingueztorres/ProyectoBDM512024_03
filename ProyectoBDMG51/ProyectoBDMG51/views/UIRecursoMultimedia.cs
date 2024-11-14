@@ -93,14 +93,20 @@ namespace ProyectoBDMG51.views
         {
             int index = comboBox3.SelectedIndex;
             index = comboBox4.SelectedIndex;
-            idAsignatura = (int)comboBox4.SelectedItem;
+            if(rol == 1) {
+            idDocente = (int)comboBox4.SelectedItem;
+            }
+            else
+            {
+                idEstudiante = (int)comboBox4.SelectedItem;
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = comboBox1.SelectedIndex;
             index = comboBox2.SelectedIndex;
-            idDocente = (int)comboBox2.SelectedIndex;
+            idAsignatura = (int)comboBox2.SelectedIndex;
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,9 +125,18 @@ namespace ProyectoBDMG51.views
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (rol == 1)
+            {
             ControllerDocente objD = new ControllerDocente();
             comboBox3.DataSource = objD.ListarDocente(textBox6.Text);
             comboBox4.DataSource = objD.obtenerId(textBox6.Text);
+            }
+            else
+            {
+                ControllerEstudiante objCE = new ControllerEstudiante();
+                comboBox3.DataSource = objCE.ListarEstudiante(textBox6.Text);
+                comboBox4.DataSource = objCE.obtenerId(textBox6.Text);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -132,6 +147,11 @@ namespace ProyectoBDMG51.views
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
