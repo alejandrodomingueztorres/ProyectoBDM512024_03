@@ -15,6 +15,9 @@ namespace ProyectoBDMG51.views
     public partial class UIRecursoMultimedia : Form
     {
         string rutaRecurso;
+        int idAsignatura;
+        int idDocente;
+        int idTipoRecurso;
         public UIRecursoMultimedia()
         {
             InitializeComponent();
@@ -73,7 +76,20 @@ namespace ProyectoBDMG51.views
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            int index = comboBox3.SelectedIndex;
+            index = comboBox4.SelectedIndex;
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBox1.SelectedIndex;
+            index = comboBox2.SelectedIndex;
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBox5.SelectedIndex;
+            index = comboBox6.SelectedIndex;
         }
     }
 }

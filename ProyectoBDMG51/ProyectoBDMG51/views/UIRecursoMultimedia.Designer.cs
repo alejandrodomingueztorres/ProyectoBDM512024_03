@@ -228,6 +228,7 @@ namespace ProyectoBDMG51.views
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(224, 24);
             this.comboBox1.TabIndex = 23;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -351,6 +352,7 @@ namespace ProyectoBDMG51.views
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(227, 24);
             this.comboBox5.TabIndex = 37;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // comboBox6
             // 
