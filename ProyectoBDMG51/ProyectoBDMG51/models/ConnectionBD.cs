@@ -207,5 +207,67 @@ namespace ProyectoBDMG51.models
             }
             return ListaComentarios;
         }
+        public List<string> ObtenerLista(string sql, string NameFiltro, string filtro)
+        {
+            List<string> lista = new List<string>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                if (NameFiltro != null)
+                {
+                    sql += "WHERE " + NameFiltro + " = @" + NameFiltro;
+                    cmd.Parameters.AddWithValue("@" + NameFiltro, filtro);
+                }
+                ConnectOpened();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    lista.Add(reader.GetString(NameFiltro));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERRROOOOOOOOOOORRRRRR");
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
+            }
+
+            return lista;
+        }
+        public List<int> ObtenerId(string sql, string NameFiltro, string filtro)
+        {
+            List<int> lista = new List<int>();
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, DataSource());
+                if (NameFiltro != null)
+                {
+                    sql += "WHERE " + NameFiltro + " = @" + NameFiltro;
+                    cmd.Parameters.AddWithValue("@" + NameFiltro, filtro);
+                }
+                ConnectOpened();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    lista.Add(reader.GetInt32(NameFiltro));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERRROOOOOOOOOOORRRRRR");
+                ConnectClosed();
+            }
+            finally
+            {
+                ConnectClosed();
+            }
+
+            return lista;
+        }
     }
 }
