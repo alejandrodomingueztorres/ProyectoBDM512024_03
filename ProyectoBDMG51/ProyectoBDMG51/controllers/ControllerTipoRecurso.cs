@@ -18,5 +18,20 @@ namespace ProyectoBDMG51.controllers
             resultado = objCBD.ExecuteQuery(sql);
             return resultado;
         }
+        public List<string> ListarTiposRecurso(string filtro)
+        {
+            string sql = "SELECT tipoRecurso FROM tipo_recursos";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<string> lista = objCBD.ObtenerLista(sql, "tipoRecurso", filtro);
+            return lista;
+        }
+        public List<int> obtenerId(string filtro)
+        {
+            string sql = "SELECT tipoRecurso FROM tipo_recursos";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<int> lista = objCBD.ObtenerId(sql, "idTR", filtro);
+
+            return lista;
+        }
     }
 }

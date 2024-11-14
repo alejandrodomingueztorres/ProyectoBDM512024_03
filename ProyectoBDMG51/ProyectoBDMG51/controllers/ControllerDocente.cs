@@ -33,15 +33,30 @@ namespace ProyectoBDMG51.controllers
             resultado= objCBD.ExecuteQuery(sql);
             return resultado;
         }
-        public bool LoginDocente(Docente objD)
+        public int LoginDocente(Docente objD)
         {
-            bool resultado = false;
+            int resultado = 0;
 
             string sql = "select * from docente where correo =" + objD.CorreoD;
             ConnectionBD objCBD = new ConnectionBD();
-            resultado = objCBD.Login(sql, objD.PasswordD);
+            resultado = objCBD.Login(sql, objD.PasswordD, "idDocente");
 
             return resultado;
+        }
+        public List<string> ListarDocente(string filtro)
+        {
+            string sql = "SELECT nombreDocente1 FROM docente";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<string> lista = objCBD.ObtenerLista(sql, "nombreDocente1", filtro);
+            return lista;
+        }
+        public List<int> obtenerId(string filtro)
+        {
+            string sql = "SELECT idAsignatura FROM docente";
+            ConnectionBD objCBD = new ConnectionBD();
+            List<int> lista = objCBD.ObtenerId(sql, "idAsignatura", filtro);
+
+            return lista;
         }
 
     }

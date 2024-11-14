@@ -18,6 +18,8 @@ namespace ProyectoBDMG51.views
         int idAsignatura;
         int idDocente;
         int idTipoRecurso;
+        int idEstudiante;
+        List<string> asignaturas;
         public UIRecursoMultimedia()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace ProyectoBDMG51.views
             string descripcionRecurso = textBox3.Text;
             string archivoRecurso = textBox4.Text;
             ControllerRecursoMultimedia objCRM = new ControllerRecursoMultimedia();
-            Recurso_multimedia objRM = new Recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso);
+            Recurso_multimedia objRM = new Recurso_multimedia(tituloRecurso, descripcionRecurso, archivoRecurso, idDocente, 1, idAsignatura, idTipoRecurso);
             bool resultado = objCRM.InsertRecursoMultimedia(objRM);
             if (resultado){ MessageBox.Show("Se insertó correctamente");
             } else { MessageBox.Show("No se ha podido insertar"); 
@@ -78,18 +80,42 @@ namespace ProyectoBDMG51.views
         {
             int index = comboBox3.SelectedIndex;
             index = comboBox4.SelectedIndex;
+            idAsignatura = (int)comboBox4.SelectedItem;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = comboBox1.SelectedIndex;
             index = comboBox2.SelectedIndex;
+            idDocente = (int)comboBox2.SelectedIndex;
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = comboBox5.SelectedIndex;
             index = comboBox6.SelectedIndex;
+            idTipoRecurso = (int)comboBox6.SelectedIndex;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ControllerAsignaturas objA = new ControllerAsignaturas();
+            comboBox1.DataSource = objA.ListarAsignaturas(textBox5.Text);
+            comboBox2.DataSource = objA.obtenerId(textBox5.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ControllerDocente objD = new ControllerDocente();
+            comboBox3.DataSource = objD.ListarDocente(textBox6.Text);
+            comboBox4.DataSource = objD.obtenerId(textBox6.Text);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ControllerTipoRecurso objCTR = new ControllerTipoRecurso();
+            comboBox5.DataSource = objCTR.ListarTiposRecurso(textBox7.Text);
+            comboBox6.DataSource = objCTR.obtenerId(textBox7.Text);
         }
     }
 }

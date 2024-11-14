@@ -99,9 +99,9 @@ namespace ProyectoBDMG51.models
             }
             return result;
         }
-        public bool Login(string sql, string password)
+        public int Login(string sql, string password, string id)
         {
-            bool resultado = false;
+            int resultado = 0;
 
             try
             {
@@ -116,7 +116,7 @@ namespace ProyectoBDMG51.models
                     string contrasenaGuardada = reader["password"].ToString();
                     if (password.Equals(contrasenaGuardada))
                     {
-                        resultado = true;
+                        resultado = (int)reader[id].ToString();
                     }
                     reader.Close();
                 }

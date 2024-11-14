@@ -69,7 +69,7 @@ namespace ProyectoBDMG51.views
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.textBox3.Location = new System.Drawing.Point(213, 160);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(252, 23);
             this.textBox3.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace ProyectoBDMG51.views
             // 
             this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Insert.Location = new System.Drawing.Point(346, 496);
-            this.Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Insert.Margin = new System.Windows.Forms.Padding(4);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(120, 32);
             this.Insert.TabIndex = 10;
@@ -90,7 +90,7 @@ namespace ProyectoBDMG51.views
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.textBox1.Location = new System.Drawing.Point(213, 119);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(252, 23);
             this.textBox1.TabIndex = 0;
@@ -128,7 +128,7 @@ namespace ProyectoBDMG51.views
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(663, 119);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 22);
             this.textBox2.TabIndex = 14;
@@ -147,7 +147,7 @@ namespace ProyectoBDMG51.views
             // 
             this.ShowRM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ShowRM.Location = new System.Drawing.Point(769, 160);
-            this.ShowRM.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowRM.Margin = new System.Windows.Forms.Padding(4);
             this.ShowRM.Name = "ShowRM";
             this.ShowRM.Size = new System.Drawing.Size(131, 32);
             this.ShowRM.TabIndex = 16;
@@ -192,7 +192,7 @@ namespace ProyectoBDMG51.views
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(82, 496);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 32);
             this.button1.TabIndex = 20;
@@ -203,7 +203,7 @@ namespace ProyectoBDMG51.views
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(82, 466);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(383, 22);
@@ -290,6 +290,7 @@ namespace ProyectoBDMG51.views
             this.button2.TabIndex = 30;
             this.button2.Text = "Filtrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -300,6 +301,7 @@ namespace ProyectoBDMG51.views
             this.button3.TabIndex = 31;
             this.button3.Text = "Filtrar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox6
             // 
@@ -335,6 +337,7 @@ namespace ProyectoBDMG51.views
             this.button4.TabIndex = 35;
             this.button4.Text = "Filtrar";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label12
             // 
@@ -416,7 +419,7 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.Insert);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UIRecursoMultimedia";
             this.Text = "UIRecursoMultimedia";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

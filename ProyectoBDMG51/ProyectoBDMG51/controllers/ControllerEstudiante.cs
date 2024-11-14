@@ -33,13 +33,13 @@ namespace ProyectoBDMG51.controllers
             return resultado;
         }
 
-        public bool LoginEstudiante(Estudiante objE)
+        public int LoginEstudiante(Estudiante objE)
         {
-            bool resultado = false;
+            int resultado = 0;
 
             string sql = "select * from estudiante where correo =" + objE.CorreoE;
             ConnectionBD objCBD = new ConnectionBD();
-            resultado = objCBD.Login(sql, objE.PasswordE);
+            resultado = objCBD.Login(sql, objE.PasswordE, "idEstudiante");
 
             return resultado;
         }
