@@ -137,13 +137,12 @@ namespace ProyectoBDMG51.views
             // 
             // dgvResultados
             // 
-            this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultados.Location = new System.Drawing.Point(490, 157);
+            this.dgvResultados.ColumnHeadersHeight = 29;
+            this.dgvResultados.Location = new System.Drawing.Point(509, 173);
             this.dgvResultados.Name = "dgvResultados";
             this.dgvResultados.RowHeadersWidth = 51;
-            this.dgvResultados.RowTemplate.Height = 24;
-            this.dgvResultados.Size = new System.Drawing.Size(276, 210);
-            this.dgvResultados.TabIndex = 11;
+            this.dgvResultados.Size = new System.Drawing.Size(347, 216);
+            this.dgvResultados.TabIndex = 0;
             // 
             // UIAsignaturas
             // 

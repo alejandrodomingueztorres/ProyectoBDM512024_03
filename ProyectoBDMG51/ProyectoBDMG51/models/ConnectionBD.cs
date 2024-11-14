@@ -71,6 +71,11 @@ namespace ProyectoBDMG51.models
             return result;
         }
 
+        internal bool ExecuteQuery(string sql)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool ExecuteQuery(string sql, Dictionary<string, object> dictionary)
         {
             bool result = false;
