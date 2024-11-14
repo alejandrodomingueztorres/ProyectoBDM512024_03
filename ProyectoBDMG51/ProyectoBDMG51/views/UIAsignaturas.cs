@@ -39,21 +39,12 @@ namespace ProyectoBDMG51.views
 
         private void Show_Click(object sender, EventArgs e)
         {
-            string nombreAsignatura = textBox2.Text;
-           
-            ControllerAsignaturas objCA = new ControllerAsignaturas();
-            DataTable resultado = objCA.SelectAsignaturaDataTable(nombreAsignatura);
+            string sqlQuery = "SELECT a.nombreAsignatura AS 'Nombre Asignatura' FROM asignaturas a";
 
+            ControllerAsignaturas controllerAsignaturas = new ControllerAsignaturas();
+            BindingSource resultadoConsulta = controllerAsignaturas.SelectAsignatura();
 
-            if (resultado != null && resultado.Rows.Count > 0)
-            {
-                dgvResultados.DataSource = resultado;
-            }
-            else
-            {
-                MessageBox.Show("No se encontraron asignaturas con ese nombre.");
-                dgvResultados.DataSource = null;
-            }
+            dgvResultados.DataSource = resultadoConsulta;
             
         }
     }
