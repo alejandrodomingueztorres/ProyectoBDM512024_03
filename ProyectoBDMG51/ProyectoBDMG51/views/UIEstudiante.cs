@@ -47,5 +47,10 @@ namespace ProyectoBDMG51.views
         {
 
         }
+
+        private void ShowE_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

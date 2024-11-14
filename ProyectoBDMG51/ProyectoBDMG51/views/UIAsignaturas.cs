@@ -47,5 +47,10 @@ namespace ProyectoBDMG51.views
             dgvResultados.DataSource = resultadoConsulta;
             
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            UIDocente UID = new UIDocente();
+        }
     }
 }

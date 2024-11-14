@@ -39,6 +39,7 @@ namespace ProyectoBDMG51.views
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Show = new System.Windows.Forms.Button();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@ namespace ProyectoBDMG51.views
             // 
             this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Insert.Location = new System.Drawing.Point(236, 188);
-            this.Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Insert.Margin = new System.Windows.Forms.Padding(4);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(115, 36);
             this.Insert.TabIndex = 2;
@@ -89,7 +90,7 @@ namespace ProyectoBDMG51.views
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(156, 134);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(193, 22);
             this.textBox1.TabIndex = 6;
@@ -118,7 +119,7 @@ namespace ProyectoBDMG51.views
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(156, 274);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(193, 22);
             this.textBox2.TabIndex = 9;
@@ -127,7 +128,7 @@ namespace ProyectoBDMG51.views
             // 
             this.Show.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.Show.Location = new System.Drawing.Point(236, 331);
-            this.Show.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Show.Margin = new System.Windows.Forms.Padding(4);
             this.Show.Name = "Show";
             this.Show.Size = new System.Drawing.Size(115, 36);
             this.Show.TabIndex = 10;
@@ -144,11 +145,23 @@ namespace ProyectoBDMG51.views
             this.dgvResultados.Size = new System.Drawing.Size(347, 216);
             this.dgvResultados.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(94, 399);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Logearse";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // UIAsignaturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 512);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvResultados);
             this.Controls.Add(this.Show);
             this.Controls.Add(this.textBox2);
@@ -159,7 +172,7 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Insert);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UIAsignaturas";
             this.Text = "UIAsignaturas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();
@@ -179,5 +192,6 @@ namespace ProyectoBDMG51.views
         private System.Windows.Forms.TextBox textBox2;
         private new System.Windows.Forms.Button Show;
         private System.Windows.Forms.DataGridView dgvResultados;
+        private System.Windows.Forms.Button button1;
     }
 }

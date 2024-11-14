@@ -54,7 +54,7 @@ namespace ProyectoBDMG51.views
             // 
             this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Insert.Location = new System.Drawing.Point(225, 342);
-            this.Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Insert.Margin = new System.Windows.Forms.Padding(4);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(163, 34);
             this.Insert.TabIndex = 10;
@@ -127,17 +127,17 @@ namespace ProyectoBDMG51.views
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label7.Location = new System.Drawing.Point(191, 22);
+            this.label7.Location = new System.Drawing.Point(101, 18);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 31);
+            this.label7.Size = new System.Drawing.Size(861, 31);
             this.label7.TabIndex = 17;
-            this.label7.Text = "Estudiante";
+            this.label7.Text = "Estudiante (ESTA EN DESUSO EL DOCENTE SIRVE PARA AMBOS)";
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(179, 96);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 22);
             this.textBox1.TabIndex = 18;
@@ -145,7 +145,7 @@ namespace ProyectoBDMG51.views
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(323, 96);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(107, 22);
             this.textBox2.TabIndex = 19;
@@ -153,7 +153,7 @@ namespace ProyectoBDMG51.views
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(179, 146);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(109, 22);
             this.textBox3.TabIndex = 20;
@@ -161,7 +161,7 @@ namespace ProyectoBDMG51.views
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(323, 146);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(107, 22);
             this.textBox4.TabIndex = 21;
@@ -169,7 +169,7 @@ namespace ProyectoBDMG51.views
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(179, 196);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(251, 22);
             this.textBox5.TabIndex = 22;
@@ -177,7 +177,7 @@ namespace ProyectoBDMG51.views
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(179, 241);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(251, 22);
             this.textBox6.TabIndex = 23;
@@ -185,7 +185,7 @@ namespace ProyectoBDMG51.views
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(179, 290);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(251, 22);
             this.textBox7.TabIndex = 24;
@@ -214,7 +214,7 @@ namespace ProyectoBDMG51.views
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(625, 96);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(235, 22);
             this.textBox8.TabIndex = 27;
@@ -223,12 +223,13 @@ namespace ProyectoBDMG51.views
             // 
             this.ShowE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.ShowE.Location = new System.Drawing.Point(740, 146);
-            this.ShowE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowE.Margin = new System.Windows.Forms.Padding(4);
             this.ShowE.Name = "ShowE";
             this.ShowE.Size = new System.Drawing.Size(121, 33);
             this.ShowE.TabIndex = 28;
             this.ShowE.Text = "Buscar";
             this.ShowE.UseVisualStyleBackColor = true;
+            this.ShowE.Click += new System.EventHandler(this.ShowE_Click);
             // 
             // UIEstudiante
             // 
@@ -254,7 +255,7 @@ namespace ProyectoBDMG51.views
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Insert);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UIEstudiante";
             this.Text = "UIEstudiante";
             this.Load += new System.EventHandler(this.UIEstudiante_Load);
